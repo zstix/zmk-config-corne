@@ -11,8 +11,8 @@
 // Layers
 #define DEFAULT 0
 #define LOWER   1
-#define RAISE   2
-#define META    3
+// #define RAISE   2
+// #define META    3
 
 / {
         keymap {
@@ -24,7 +24,6 @@
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ENT  |
 //                    | GUI | LWR | SPC |   | SPC | RSE  | ALT |
-// TODO: layer 3
 // TODO: only one space?
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
@@ -48,32 +47,32 @@
                         >;
                 };
 
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// | GRAVE |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |       |     |     |  {  |  }  |     |   |  +  |  -  |  =  |  [  |  ]  |  \   |
-// |   ESC |     |     |     |     |     |   |     | P/P | PRV | VL+ | VL- | NEXT |
-//                     | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp GRAVE &kp N1 &kp N2 &kp N3   &kp N4   &kp N5    &kp N6   &kp N7    &kp N8     &kp N9       &kp N0       &kp BSPC
-   &trans    &trans &trans &kp LBRC &kp RBRC &trans    &kp PLUS &kp MINUS &kp EQUAL  &kp LBKT     &RBKT        &kp BSLH
-   &kp ESC   &trans &trans &trans   &trans   &trans    &trans   &kp C_PP  &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
-                        &kp LGUI  &mo 3  &kp SPACE    &kp RET  &trans  &kp RALT
-                        >;
-                };
+//                 raise_layer {
+// // -----------------------------------------------------------------------------------------
+// // | GRAVE |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// // |       |     |     |  {  |  }  |     |   |  +  |  -  |  =  |  [  |  ]  |  \   |
+// // |   ESC |     |     |     |     |     |   |     | P/P | PRV | VL+ | VL- | NEXT |
+// //                     | GUI |     | SPC |   | ENT |     | ALT |
+//                         bindings = <
+//    &kp GRAVE &kp N1 &kp N2 &kp N3   &kp N4   &kp N5    &kp N6   &kp N7    &kp N8     &kp N9       &kp N0       &kp BSPC
+//    &trans    &trans &trans &kp LBRC &kp RBRC &trans    &kp PLUS &kp MINUS &kp EQUAL  &kp LBKT     &RBKT        &kp BSLH
+//    &kp ESC   &trans &trans &trans   &trans   &trans    &trans   &kp C_PP  &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
+//                         &kp LGUI  &mo 3  &kp SPACE    &kp RET  &trans  &kp RALT
+//                         >;
+//                 };
 
-                meta_layer {
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |     |     |     |     |     |      |
-// |     |     |     |     |     |     |   | LFT | DWN | UP  | RHT |     |      |
-// | ESC |     |     |     |     |     |   |     |     |     |     |     |      |
-//                     | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &trans  &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans &trans
-   &trans  &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp ESC &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans &trans
-                        &kp LGUI  &trans  &kp SPACE    &kp RET  &trans  &kp RALT
-                        >;
-                };
+//                 meta_layer {
+// // -----------------------------------------------------------------------------------------
+// // |     |     |     |     |     |     |   |     |     |     |     |     |      |
+// // |     |     |     |     |     |     |   | LFT | DWN | UP  | RHT |     |      |
+// // | ESC |     |     |     |     |     |   |     |     |     |     |     |      |
+// //                     | GUI |     | SPC |   | ENT |     | ALT |
+//                         bindings = <
+//    &trans  &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans &trans
+//    &trans  &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+//    &kp ESC &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans &trans
+//                         &kp LGUI  &trans  &kp SPACE    &kp RET  &trans  &kp RALT
+//                         >;
+//                 };
         };
 };
