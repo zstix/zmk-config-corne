@@ -15,64 +15,79 @@
 #define META    3
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ENT  |
-//                    | GUI | LWR | SPC |   | SPC | RSE  | ALT |
-// TODO: only one space?
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RET
-              &kp LGUI &mo LOWER &kp SPACE   &kp SPC &mo RAISE &kp RALT
-                        >;
-                };
-
-                lower_layer {
-// ---------------------------------------------------------------------------------------
-// | TILDE |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// |       |     |     |     |     |     |   |     |  _  |     |     |     | "|"  |
-// |   ESC |     |     |     |     |     |   |     |     |     |     |  `  |  ~   |
-//                     | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR  &kp BSPC
-   &trans    &trans   &trans &trans   &trans   &trans       &trans    &kp UNDER &trans          &trans   &trans    &kp PIPE
-   &kp ESC   &trans   &trans &trans   &trans   &trans       &trans    &trans    &trans          &trans   &kp GRAVE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE    &kp RET   &mo META  &kp RALT
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// | GRAVE |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |       |     |     |  {  |  }  |     |   |  +  |  -  |  =  |  [  |  ]  |  \   |
-// |   ESC |     |     |     |     |     |   |     | P/P | PRV | VL+ | VL- | NEXT |
-//                     | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp GRAVE &kp N1 &kp N2 &kp N3   &kp N4   &kp N5    &kp N6   &kp N7    &kp N8     &kp N9       &kp N0       &kp BSPC
-   &trans    &trans &trans &kp LBRC &kp RBRC &trans    &kp PLUS &kp MINUS &kp EQUAL  &kp LBKT     &kp RBKT     &kp BSLH
-   &kp ESC   &trans &trans &trans   &trans   &trans    &trans   &kp C_PP  &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
-                      &kp LGUI  &mo META  &kp SPACE    &kp RET  &trans  &kp RALT
-                        >;
-                };
-
-                meta_layer {
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |     |     |     |     |     |      |
-// |     |     |     |     |     |     |   | LFT | DWN | UP  | RHT |     |      |
-// | ESC |     |     |     |     |     |   |     |     |     |     |     |      |
-//                     | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &trans  &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans &trans
-   &trans  &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp ESC &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans &trans
-                        &kp LGUI  &trans  &kp SPACE    &kp RET  &trans  &kp RALT
-                        >;
-                };
+        default_layer {
+            bindings = <
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            // | TAB      | Q        | W        | E        | R        | T        |          | Y        | U        | I        | O        | P        | BKSP     |
+                 &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T                 &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            // | CTRL     | A        | S        | D        | F        | G        |          | H        | J        | K        | L        | :        | '        |
+                 &kp LCTRL  &kp A      &kp S      &kp D      &kp F      &kp G                 &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            // | SHIFT    | Z        | X        | C        | V        | B        |          | N        | M        | ,        | .        | /        | ENTER    |
+                 &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B                 &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RET
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            //                                  | GUI      | LOW      | SPACE    |          | SPACE    | RAISE    | ALT      |
+                                                  &kp LGUI   &mo LOWER  &kp SPACE             &kp SPC    &mo RAISE  &kp RALT
+            //                                  +----------+----------+----------+          +---------+-----------+----------+
+            >;
         };
+
+        lower_layer {
+            bindings = <
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            // | TILDE    | !        | @        | #        | $        | %        |          | ^        | &        | *        | (        | )        | BKSP     |
+                 &kp TILDE  &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT             &kp CARET  &kp AMPS  &kp KP_STAR &kp LPAR   &kp RPAR   &kp BSPC
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            // |          |          |          |          |          |          |          |          | -        |          |          |          | |        |
+                 &trans     &trans     &trans     &trans     &trans     &trans                &trans     &kp UNDER  &trans     &trans     &trans     &kp PIPE
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            // | ESC      |          |          |          |          |          |          |          |          |          |          | `        | ~        |
+                 &kp ESC    &trans     &trans     &trans     &trans     &trans                &trans     &kp UNDER  &trans     &trans     &kp GRAVE  &kp TILDE
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            //                                  | GUI      |          | SPACE    |          | ENTER    | META     | ALT      |
+                                                  &kp LGUI   &trans     &kp SPACE             &kp RET    &mo META   &kp RALT
+            //                                  +----------+----------+----------+          +---------+-----------+----------+
+            >;
+        };
+
+        raise_layer {
+            bindings = <
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            // | GRAVE    | 1        | 2        | 3        | 4        | 5        |          | 6        | 7        | 8        | 9        | 0        | BKSP     |
+                 &kp GRAVE  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BSPC
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            // |          |          |          | {        | }        |          |          | +        | -        | =        | [        | ]        | \        |
+                 &trans     &trans     &trans     &kp LBRC   &kp RBRC   &trans                &kp PLUS   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            // | ESC      |          |          |          |          |          |          |          | PLAY/P   | PREV     | VOL+     | VOL-     | NEXT     |
+                 &kp ESC    &trans     &trans     &trans     &trans     &trans                &trans    &kp C_PP  &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            //                                  | GUI      | META     | SPACE    |          | ENTER    |          | ALT      |
+                                                  &kp LGUI   &mo META   &kp SPACE             &kp RET    &trans     &kp RALT
+            //                                  +----------+----------+----------+          +---------+-----------+----------+
+            >;
+        };
+
+        meta_layer {
+            bindings = <
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            // |          |          |          |          |          |          |          |          |          |          |          |          |          |
+                 &trans     &trans     &trans     &trans     &trans     &trans                &trans     &trans     &trans     &trans     &trans     &trans          
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            // |          |          |          |          |          |          |          | LEFT     | DOWN     | UP       | RIGHT    |          |          |
+                 &trans     &trans     &trans     &trans     &trans     &trans                &kp LEFT   &kp DOWN   &kp UP     &RIGHT     &trans     &trans          
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            // | ESC      |          |          |          |          |          |          |          |          |          |          |          |          |
+                 &kp ESC    &trans     &trans     &trans     &trans     &trans                &trans     &trans     &trans     &trans     &trans     &trans          
+            // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
+            //                                  | GUI      |          | SPACE    |          | ENTER    |          | ALT      |
+                                                  &kp LGUI   &trans     &kp SPACE             &kp RET    &trans     &kp RALT
+            //                                  +----------+----------+----------+          +---------+-----------+----------+
+            >;
+        };
+    };
 };
