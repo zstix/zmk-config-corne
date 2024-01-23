@@ -119,8 +119,8 @@
                  &none      &kp Q      &kp W      &kp E      &kp R      &kp T                 &kp Y      &kp U      &kp I      &kp O      &kp P      &none
             // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
             // | //////// | A        | S        | D        | F        | G        |          | H        | J        | K        | L        | ; :      | //////// |
-            // | //////// |          | HOLD:ALT | HOLD:CTR | HOLD:SHF |          |          |          | HOLD:GUI | HOLDCTRL | HOLD:ALT |          | //////// |
-                 &none      &kp A     &ht LALT S &ht LCTRL D &ht LSHFT F &kp G                &kp H     &ht RGUI J &ht RCTRL K &ht RALT L &kp SEMI   &none
+            // | //////// |          | HOLD:ALT | HOLD:CTR | HOLD:GUI | HOLD:SHF |          | HOLD:SHF | HOLD:GUI | HOLDCTRL | HOLD:ALT |          | //////// |
+                 &none      &kp A     &ht LALT S &ht LCTRL D &ht LGUI F &ht LSHFT G          &ht RSHFT H &ht RGUI J &ht RCTRL K &ht RALT L &kp SEMI   &none
             // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
             // | //////// | Z        | X        | C        | V        | B        |          | N        | M        | , <      | . >      | / ?      | //////// |
                  &none      &kp Z      &kp X      &kp C      &kp V      &kp B                 &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &none
