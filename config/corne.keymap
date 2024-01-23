@@ -60,7 +60,7 @@
             bindings = <
             // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
             // | TILDE    | !        | @        | #        | $        | %        |          | ^        | &        | *        | (        | )        | BKSP     |
-                 &kp TILDE  &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT             &kp CARET  &kp AMPS  &kp KP_STAR &kp LPAR   &kp RPAR   &kp BSPC
+                 &kp TILDE  &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT             &kp CARET  &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
             // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
             // |          |          |          |          |          |          |          |          | -        |          |          |          | |        |
                  &trans     &trans     &trans     &trans     &trans     &trans                &trans     &kp UNDER  &trans     &trans     &trans     &kp PIPE
