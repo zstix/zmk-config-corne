@@ -57,7 +57,7 @@
                  &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T                 &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
             // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
             // | CTRL     | A        | S        | D        | F        | G        |          | H        | J        | K        | L        | ; :      | ' "      |
-                 &kp LCTRL  &htm A 3   &kp S     &ht LALT D  &ht LGUI F &kp G                 &kp H      &ht RGUI J &ht RALT K &kp L      &kp SEMI   &kp SQT
+                 &kp LCTRL  &htm 3 A   &kp S     &ht LALT D  &ht LGUI F &kp G                 &kp H      &ht RGUI J &ht RALT K &kp L      &kp SEMI   &kp SQT
             // +----------+----------+----------+----------+----------+----------+          +----------+----------+----------+----------+----------+----------+
             // | SHIFT    | Z        | X        | C        | V        | B        |          | N        | M        | , <      | . >      | / ?      | ENTER    |
                  &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B                 &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RET
