@@ -32,13 +32,12 @@
             bindings = <&kp>, <&kp>;
         };
         htm: hold_tap_mo {
-            label = "hold_tap";
+            label = "hold_tap_mo";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <150>;
-            global-quick-tap;
             bindings = <&mo>, <&kp>;
         };
     };
